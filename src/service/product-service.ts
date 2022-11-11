@@ -14,13 +14,12 @@ export class ProductService {
     }
 
     findAll = async (req: Request, res: Response) => {
-        let products = this.productRepository.query(`select * from product JOIN category  on product.idCategory = category.id`);
+        let products = this.productRepository.query(`select * from product JOIN category  on product.idCategory = category.idC`);
         return products;
     }
 
-    findOneById = async (req: Request, res: Response) => {
-        let id = +req.params.id
-        return await this.productRepository.findOneBy(id);
+    findOneById = async (id) => {
+        return await this.productRepository.findOneById(id);
     }
 
     saveProduct = async (req: Request, res: Response) => {

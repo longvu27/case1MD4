@@ -45,18 +45,19 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="form-group">
-                            <textarea id="message" required="required" class="form-control" rows="3"
-                                      placeholder="description" name="description" value="<%=product.description%>"></textarea>
+                            <input id="message" required="required" class="form-control" rows="3"
+                                      placeholder="description" name="description" value="<%=product.description%>">
                         </div>
                         <div>
                             <select name="idCategory" class="browser-default custom-select">
 
                                 <option selected>Open this select menu</option>
                                 <% for (var i = 0; i < listCategory.length; i++) { %>
-                                <option value="<%=listCategory[i].id%>"><%=listCategory[i].nameC%></option>
+                                <option value="<%=listCategory[i].idC%>"><%=listCategory[i].nameC%></option>
                                 <%}%>
                             </select>
                         </div>
+                        <br>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>

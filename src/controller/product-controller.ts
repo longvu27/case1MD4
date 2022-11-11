@@ -33,11 +33,12 @@ export class ProductController {
     showFormEdit = async (req: Request, res: Response) => {
         let id = +req.params.id
         if (!isNaN(id)) {
-            let product = await this.productService.findOneById(req, res);
+            let product = await this.productService.findOneById(id);
             let category = await this.categoryService.findAllCategory(req,res);
             res.render('product/edit', {
                 product: product,listCategory: category
             });
+
         }
     }
 
@@ -47,8 +48,9 @@ export class ProductController {
 
     showFormDelete = async (req: Request, res: Response) => {
         let id = +req.params.id;
+
         if((id)) {
-            let product = await this.productService.findOneById(req,res);
+            let product = await this.productService.findOneById(id);
             res.render('product/delete', {
                 product: product
             })
@@ -62,7 +64,7 @@ export class ProductController {
     searchProduct = async (req: Request, res: Response) => {
         let products = await this.productService.searchProduct(req.body.name);
         res.render('product/search', {
-            listProduct: products
+            listProduct: products,
         })
     }
 

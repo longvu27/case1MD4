@@ -3,7 +3,7 @@ export declare class ProductService {
     private productRepository;
     constructor();
     findAll: (req: Request, res: Response) => Promise<any>;
-    findOneById: (req: Request, res: Response) => Promise<any>;
+    findOneById: (id: any) => Promise<any>;
     saveProduct: (req: Request, res: Response) => Promise<void>;
     editProduct: (req: Request, res: Response) => Promise<void>;
     deleteProduct: (req: Request, res: Response) => Promise<void>;

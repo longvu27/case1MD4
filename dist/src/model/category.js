@@ -16,7 +16,7 @@ let Category = class Category {
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)({ type: 'int' }),
     __metadata("design:type", Number)
-], Category.prototype, "id", void 0);
+], Category.prototype, "idC", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'varchar' }),
     __metadata("design:type", String)

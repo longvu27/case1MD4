@@ -1089,7 +1089,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="317" parent="315" name="id">
+    <column id="317" parent="315" name="idC">
       <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
@@ -1101,7 +1101,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>2</Position>
     </column>
     <index id="319" parent="315" name="PRIMARY">
-      <ColNames>id</ColNames>
+      <ColNames>idC</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>

@@ -6,12 +6,11 @@ const product_1 = require("../model/product");
 class ProductService {
     constructor() {
         this.findAll = async (req, res) => {
-            let products = this.productRepository.query(`select * from product JOIN category  on product.idCategory = category.id`);
+            let products = this.productRepository.query(`select * from product JOIN category  on product.idCategory = category.idC`);
             return products;
         };
-        this.findOneById = async (req, res) => {
-            let id = +req.params.id;
-            return await this.productRepository.findOneBy(id);
+        this.findOneById = async (id) => {
+            return await this.productRepository.findOneById(id);
         };
         this.saveProduct = async (req, res) => {
             let files = req.files;
